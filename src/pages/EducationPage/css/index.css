@@ -1,0 +1,35 @@
+.education_main {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    z-index: 999;
+}
+
+.education_box {
+    line-height: 30px;
+    display: flex;
+    margin: 10px;
+}
+
+.education_box_left {
+    display: flex;
+    flex-direction: column;
+    padding-right: 20px;
+}
+
+.education_box_dot {
+    color: #F78DA7;
+    font-size: 100px;
+}
+
+.education_box_border {
+    border-left: 7px solid #F78DA7;
+    margin-left: 14px;
+    margin-top: 8px;
+    height: 15vh;
+}
+
+.education_box_detail {
+    display: flex;
+    justify-content: space-between;
+}

@@ -6,6 +6,7 @@ import ContactPage from "./pages/ContactPage";
 import EducationPage from "./pages/EducationPage";
 import ExperiencePage from "./pages/ExperiencePage";
 import ProfilesPage from "./pages/ProfilesPage";
+import SkillsPage from "./pages/SkillsPage";
 
 const pages = [
   {
@@ -14,14 +15,19 @@ const pages = [
     element: <HomePage />,
   },
   {
-    path: "/education",
-    icon: "school",
-    element: <EducationPage />,
-  },
-  {
     path: "/experience",
     icon: "business_center",
     element: <ExperiencePage />,
+  },
+  {
+    path: "/skills",
+    icon: "construction",
+    element: <SkillsPage />,
+  },
+  {
+    path: "/education",
+    icon: "school",
+    element: <EducationPage />,
   },
   {
     path: "/profiles",

@@ -1,8 +1,9 @@
-import React from 'react'
+import React from 'react';
+import './css/index.css'
 
 function ExperiencePage() {
   return (
-    <div>ExperiencePage</div>
+    <div className="experience_main">ExperiencePage</div>
   )
 }
 
