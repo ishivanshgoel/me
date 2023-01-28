@@ -1,0 +1,40 @@
+.homepage_main {
+  display: flex;
+  height: 70vh;
+  width: 92%;
+  border-radius: 0.5rem;
+  z-index: 999;
+}
+
+.homepage_main_left {
+  flex: 0.6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.homepage_main_left_intro {
+  height: 45vh;
+  width: 80%;
+  font-family: "Poppins", sans-serif;
+  border-radius: 2rem;
+}
+
+.homepage_main_left_intro_name {
+  line-height: 10px;
+  margin-bottom: 50px;
+}
+
+.homepage_main_right {
+  flex: 0.4;
+}
+
+.homepage_main_right > img {
+  height: 70vh;
+  width: auto;
+  border-radius: 2rem;
+  border: 3px double rgba(142, 209, 252, 0.7);
+  -webkit-box-shadow: -4px 3px 46px -6px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -4px 3px 46px -6px rgba(0, 0, 0, 0.75);
+  box-shadow: -4px 3px 46px -6px rgba(0, 0, 0, 0.75);
+}
