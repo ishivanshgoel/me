@@ -1,3 +1,18 @@
 .experience_main {
-    color: rebeccapurple;
+    background-color: red;
+    height: 75vh;
+    width: 92%;
+    z-index: 999; 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    overflow: scroll;
+}
+
+.experience_card {
+    height: 20vh;
+    /* width: 30%; */
+    background-color: yellow;
+    margin: 20px;
 }

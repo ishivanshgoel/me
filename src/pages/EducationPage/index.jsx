@@ -4,6 +4,7 @@ import "./css/index.css";
 function EducationPage() {
   return (
     <div className="education_main">
+      <div className="education_heading">EDUCATION</div>
       <div className="education_box">
         <div className="education_box_left">
           <div className="education_box_dot">•</div>
