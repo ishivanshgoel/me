@@ -17,6 +17,9 @@
   justify-content: center;
   align-items: center;
   border-radius: 10px;
+  outline: none;
+  border: none;
+  background-color: transparent;
 }
 
 .item_controller_container_item:hover {

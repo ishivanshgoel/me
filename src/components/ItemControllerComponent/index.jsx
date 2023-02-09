@@ -1,24 +1,29 @@
-import React from "react";
+import React, { useState } from "react";
 import "./css/index.css";
 
-function IndexControllerComponent() {
+function IndexControllerComponent({ page, wrapperSetParent }) {
+  const [current, setCurrent] = useState(page);
   function next() {
-    console.log('next clicked')
+    setCurrent(current + 1);
+    wrapperSetParent(current + 1);
   }
 
   function previous() {
-    console.log('previous clicked')
+    if (current > 0) {
+      setCurrent(current - 1);
+      wrapperSetParent(current - 1);
+    }
   }
 
   return (
     <div className="item_controller">
       <div className="item_controller_container">
-        <div className="item_controller_container_item" onClick={previous}>
+        <button className="item_controller_container_item" onClick={previous}>
           <span class="material-symbols-outlined">arrow_back_ios</span>
-        </div>
-        <div className="item_controller_container_item" onClick={next}>
+        </button>
+        <button className="item_controller_container_item" onClick={next}>
           <span class="material-symbols-outlined">arrow_forward_ios</span>
-        </div>
+        </button>
       </div>
     </div>
   );

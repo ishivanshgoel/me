@@ -1,11 +1,11 @@
-import React from "react";
+import React, { useState, useCallback } from "react";
 import "./css/index.css";
 import ExperienceCard from "./ExperienceCard";
 import IndexControllerComponent from "../../components/ItemControllerComponent";
 
 const experiences = [
   {
-    companyName: "MathonGo",
+    companyName: "MathonGo 1",
     companyLogo: "",
     duration: "09/2022 - 12/2022",
     employmentType: "Internship",
@@ -27,7 +27,7 @@ const experiences = [
     },
   },
   {
-    companyName: "MathonGo",
+    companyName: "MathonGo 2",
     duration: "09/2022 - 12/2022",
     employmentType: "Internship",
     location: "Bangalore (Remote)",
@@ -48,7 +48,7 @@ const experiences = [
     },
   },
   {
-    companyName: "MathonGo",
+    companyName: "MathonGo 3",
     duration: "09/2022 - 12/2022",
     employmentType: "Internship",
     location: "Bangalore (Remote)",
@@ -69,7 +69,7 @@ const experiences = [
     },
   },
   {
-    companyName: "MathonGo",
+    companyName: "MathonGo 4",
     duration: "09/2022 - 12/2022",
     employmentType: "Internship",
     location: "Bangalore (Remote)",
@@ -90,7 +90,7 @@ const experiences = [
     },
   },
   {
-    companyName: "MathonGo",
+    companyName: "MathonGo 5",
     duration: "09/2022 - 12/2022",
     employmentType: "Internship",
     location: "Bangalore (Remote)",
@@ -111,7 +111,7 @@ const experiences = [
     },
   },
   {
-    companyName: "MathonGo",
+    companyName: "MathonGo 6",
     duration: "09/2022 - 12/2022",
     employmentType: "Internship",
     location: "Bangalore (Remote)",
@@ -134,6 +134,7 @@ const experiences = [
 ];
 
 function ExperiencePage() {
+  const [page, setPage] = useState(0);
 
   // get array of experience cards
   function getExperienceCards() {
@@ -142,12 +143,22 @@ function ExperiencePage() {
     ));
   }
 
-  return <div className="experience_main">
-    {
-      getExperienceCards()[0]
-    }
-    <IndexControllerComponent/>
-  </div>;
+  // to set page number in child component
+  const wrapperSetPage = useCallback(
+    (pageNumber) => {
+      if (pageNumber < experiences.length && pageNumber >= 0) {
+        setPage(pageNumber);
+      }
+    },
+    [setPage]
+  );
+
+  return (
+    <div className="experience_main">
+      {getExperienceCards()[page]}
+      <IndexControllerComponent page={page} wrapperSetParent={wrapperSetPage} />
+    </div>
+  );
 }
 
 export default ExperiencePage;
