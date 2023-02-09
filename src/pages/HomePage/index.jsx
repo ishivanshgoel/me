@@ -7,7 +7,7 @@ function HomePage() {
     <div className="homepage_main">
       <div className="homepage_main_left">
         <div className="homepage_main_left_intro">
-          <h1>Hey, 👋</h1>
+          <h1>Hey, <span class="homepage_main_left_intro_wave">👋</span></h1>
           <div className="homepage_main_left_intro_name">
             <h2>I'm Shivansh Goel</h2>
             <p>@ishivanshgoel</p>

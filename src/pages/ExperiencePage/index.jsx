@@ -35,6 +35,21 @@ const experiences = [
       Stack: "C#, .NET"
     },
     links: []
+  },
+  {
+    companyName: "Samsung (Prism Developer Intern)",
+    companyLogo: "https://images.samsung.com/is/image/samsung/assets/in/about-us/brand/logo/mo/256_144_4.png?$512_N_PNG$",
+    duration: "06/2021 - 01/2022",
+    employmentType: "Internship",
+    location: "Bangalore",
+    tasks: {
+      "Worklet": "Worked on NLP Command Suggestions Worklet.",
+      "Achievement": "Awarded with a Certificate of Excellence at the end of this program."
+    },
+    skills: {
+      Stack: "Python, Flutter, Research"
+    },
+    links: []
   }
 ];
 
