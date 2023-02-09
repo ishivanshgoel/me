@@ -5,8 +5,8 @@ import IndexControllerComponent from "../../components/ItemControllerComponent";
 
 const experiences = [
   {
-    companyName: "MathonGo 1",
-    companyLogo: "",
+    companyName: "MathonGo (Backend Developer Intern)",
+    companyLogo: "https://www.mathongo.com/public/brand/mathongo/social-card.png",
     duration: "09/2022 - 12/2022",
     employmentType: "Internship",
     location: "Bangalore (Remote)",
@@ -15,122 +15,27 @@ const experiences = [
         "Created a data pipeline to feed the analytics dashboard which is used to run marketing campaigns by correlating data or analyzing the user behavior across three different brands (platforms) of MathonGo.",
     },
     skills: {
-      Stack: [
-        "Typescript",
-        "Node.js",
-        "Express",
-        "MongoDB",
-        "Cron Job",
-        "GitHub Action",
-      ],
-      "Cloud Services": ["AWS Lambda", "AWS SQS", "EC2", "S3", "Cloudwatch"],
+      Stack: "Typescript, Node.js, Express, MongoDB, Cron Job, GitHub Action",
+      "Cloud Services": "AWS Lambda, AWS SQS, EC2, S3, Cloudwatch",
     },
+    links: []
   },
   {
-    companyName: "MathonGo 2",
-    duration: "09/2022 - 12/2022",
+    companyName: "Microsoft (Software Engineer Intern)",
+    companyLogo: "https://cdn.vox-cdn.com/thumbor/ba88KSux9BR4YxRoCDODtY6o95A=/0x0:2040x1360/1200x800/filters:focal(857x517:1183x843)/cdn.vox-cdn.com/uploads/chorus_image/image/55639013/DSCF1179.0.0.jpg",
+    duration: "05/2022 - 07/2022",
     employmentType: "Internship",
-    location: "Bangalore (Remote)",
+    location: "Hyderabad",
     tasks: {
-      "Analytics Platform":
-        "Created a data pipeline to feed the analytics dashboard which is used to run marketing campaigns by correlating data or analyzing the user behavior across three different brands (platforms) of MathonGo.",
+      "Team": "Worked on the Incorporation of SBOM for Azure containers offer certification under the AzCertify team",
+      "SBOM": "Started with the research having the goal of developing a POC for validating an SBOM.",
+      "CPLAT": "Started with the research having the goal of developing a POC for validating an SBOM."
     },
     skills: {
-      Stack: [
-        "Typescript",
-        "Node.js",
-        "Express",
-        "MongoDB",
-        "Cron Job",
-        "GitHub Action",
-      ],
-      "Cloud Services": ["AWS Lambda", "AWS SQS", "EC2", "S3", "Cloudwatch"],
+      Stack: "C#, .NET"
     },
-  },
-  {
-    companyName: "MathonGo 3",
-    duration: "09/2022 - 12/2022",
-    employmentType: "Internship",
-    location: "Bangalore (Remote)",
-    tasks: {
-      "Analytics Platform":
-        "Created a data pipeline to feed the analytics dashboard which is used to run marketing campaigns by correlating data or analyzing the user behavior across three different brands (platforms) of MathonGo.",
-    },
-    skills: {
-      Stack: [
-        "Typescript",
-        "Node.js",
-        "Express",
-        "MongoDB",
-        "Cron Job",
-        "GitHub Action",
-      ],
-      "Cloud Services": ["AWS Lambda", "AWS SQS", "EC2", "S3", "Cloudwatch"],
-    },
-  },
-  {
-    companyName: "MathonGo 4",
-    duration: "09/2022 - 12/2022",
-    employmentType: "Internship",
-    location: "Bangalore (Remote)",
-    tasks: {
-      "Analytics Platform":
-        "Created a data pipeline to feed the analytics dashboard which is used to run marketing campaigns by correlating data or analyzing the user behavior across three different brands (platforms) of MathonGo.",
-    },
-    skills: {
-      Stack: [
-        "Typescript",
-        "Node.js",
-        "Express",
-        "MongoDB",
-        "Cron Job",
-        "GitHub Action",
-      ],
-      "Cloud Services": ["AWS Lambda", "AWS SQS", "EC2", "S3", "Cloudwatch"],
-    },
-  },
-  {
-    companyName: "MathonGo 5",
-    duration: "09/2022 - 12/2022",
-    employmentType: "Internship",
-    location: "Bangalore (Remote)",
-    tasks: {
-      "Analytics Platform":
-        "Created a data pipeline to feed the analytics dashboard which is used to run marketing campaigns by correlating data or analyzing the user behavior across three different brands (platforms) of MathonGo.",
-    },
-    skills: {
-      Stack: [
-        "Typescript",
-        "Node.js",
-        "Express",
-        "MongoDB",
-        "Cron Job",
-        "GitHub Action",
-      ],
-      "Cloud Services": ["AWS Lambda", "AWS SQS", "EC2", "S3", "Cloudwatch"],
-    },
-  },
-  {
-    companyName: "MathonGo 6",
-    duration: "09/2022 - 12/2022",
-    employmentType: "Internship",
-    location: "Bangalore (Remote)",
-    tasks: {
-      "Analytics Platform":
-        "Created a data pipeline to feed the analytics dashboard which is used to run marketing campaigns by correlating data or analyzing the user behavior across three different brands (platforms) of MathonGo.",
-    },
-    skills: {
-      Stack: [
-        "Typescript",
-        "Node.js",
-        "Express",
-        "MongoDB",
-        "Cron Job",
-        "GitHub Action",
-      ],
-      "Cloud Services": ["AWS Lambda", "AWS SQS", "EC2", "S3", "Cloudwatch"],
-    },
-  },
+    links: []
+  }
 ];
 
 function ExperiencePage() {

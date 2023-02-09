@@ -1,51 +1,57 @@
 import React from "react";
 import "./css/expereinceCard.css";
 
-// {
-//   companyName: "MathonGo",
-//   duration: "09/2022 - 12/2022",
-//   employmentType: "Internship",
-//   location: "Bangalore (Remote)",
-//   tasks: {
-//     "Analytics Platform":
-//       "Created a data pipeline to feed the analytics dashboard which is used to run marketing campaigns by correlating data or analyzing the user behavior across three different brands (platforms) of MathonGo.",
-//   },
-//   skills: {
-//     Stack: [
-//       "Typescript",
-//       "Node.js",
-//       "Express",
-//       "MongoDB",
-//       "Cron Job",
-//       "GitHub Action",
-//     ],
-//     "Cloud Services": ["AWS Lambda", "AWS SQS", "EC2", "S3", "Cloudwatch"],
-//   },
-// },
-
 function ExperienceCard({ experience }) {
   return (
     <div className="experience_card">
-      <p className="experience_card_company_name">
-        <b>Company: </b> {experience["companyName"]}
-      </p>
+      <div className="experience_card_company_logo_container">
+        <img
+          className="experience_card_company_logo"
+          src={experience["companyLogo"]}
+        ></img>
+      </div>
+      <div className="experience_card_company_name_container">
+        <p className="experience_card_company_name">
+          {experience["companyName"]}
+        </p>
+      </div>
       <div className="experience_card_meta">
-      <p className="experience_card_duration">
-        Duration: {experience["duration"]}
-      </p>
-      <p className="experience_card_location">
-        Location: {experience["location"]}
-      </p>
+        <p className="experience_card_duration">
+          Duration: {experience["duration"]}
+        </p>
+        <p className="experience_card_location">
+          Location: {experience["location"]}
+        </p>
       </div>
       <hr></hr>
       <p>
         <i>Tasks/ Achievements</i>
       </p>
-      {Object.keys(experience["tasks"]).map((task) => (
-        <p className="experience_card_tasks">
+      {Object.keys(experience["tasks"]).map((task, index) => (
+        <p
+          className="experience_card_tasks"
+          key={index + "_" + task.toString()}
+        >
           <b> {task} </b>: {experience["tasks"][task]}
         </p>
       ))}
+
+      {Object.keys(experience["skills"]).map((skill, index) => (
+        <p
+          className="experience_card_tasks"
+          key={index + "_" + skill.toString()}
+        >
+          <b> {skill} </b>: {experience["skills"][skill]}
+        </p>
+      ))}
+      {
+        (experience["links"] && experience["links"].length > 0) ? <b>Links: </b> : null
+      }
+      {
+        experience["links"].map((link, index) => (
+          <a href={link}>{link}</a>
+        ))
+      }
     </div>
   );
 }

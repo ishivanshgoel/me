@@ -1,10 +1,29 @@
 .experience_card {
   min-height: 20vh;
-  width: 30%;
-  margin: 20px;
+  width: 70%;
   padding: 0px 20px 0px 20px;
-  border: 2px dashed #f78da7;
+  padding: 50px;
+  border-radius: 1.5rem;
   cursor: pointer;
+  margin: -50px;
+}
+
+.experience_card_company_logo_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.experience_card_company_logo {
+    height: 300px;
+    width: 600px;
+    object-fit: cover;
+}
+
+.experience_card_company_name_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .experience_card_company_name {
@@ -15,12 +34,4 @@
   display: flex;
   line-height: 2px;
   justify-content: space-between;
-}
-
-.experience_card_duration {
-    
-}
-
-.experience_card_tasks {
-  /* line-height: 0px; */
 }
