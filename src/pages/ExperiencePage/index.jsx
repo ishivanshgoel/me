@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from "react";
+import React, { useState, useCallback, useMemo } from "react";
 import "./css/index.css";
 import ExperienceCard from "./ExperienceCard";
 import IndexControllerComponent from "../../components/ItemControllerComponent";
@@ -56,12 +56,13 @@ const experiences = [
 function ExperiencePage() {
   const [page, setPage] = useState(0);
 
-  // get array of experience cards
   function getExperienceCards() {
     return experiences.map((experience) => (
       <ExperienceCard experience={experience} />
     ));
   }
+
+  const experienceCards = useMemo(getExperienceCards, []);
 
   // to set page number in child component
   const wrapperSetPage = useCallback(
@@ -75,7 +76,7 @@ function ExperiencePage() {
 
   return (
     <div className="experience_main">
-      {getExperienceCards()[page]}
+      {experienceCards[page]}
       <IndexControllerComponent page={page} wrapperSetParent={wrapperSetPage} />
     </div>
   );
