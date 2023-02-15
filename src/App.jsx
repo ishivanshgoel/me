@@ -29,11 +29,11 @@ const pages = [
     icon: "school",
     element: <EducationPage />,
   },
-  {
-    path: "/profiles",
-    icon: "public",
-    element: <ProfilesPage />,
-  },
+  // {
+  //   path: "/profiles",
+  //   icon: "public",
+  //   element: <ProfilesPage />,
+  // },
   {
     path: "/contact",
     icon: "call",
