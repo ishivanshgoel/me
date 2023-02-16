@@ -6,8 +6,12 @@ function RouterComponent({ pages }) {
   const navigate = useNavigate();
   const location = useLocation();
 
-  const onClick = (event) => {
-    navigate(event.target.id);
+  const onClick = (path, redirect) => {
+    if(redirect) {
+      window.location.href = redirect;
+    } else {
+      navigate(path);
+    }
   };
 
   return (
@@ -21,7 +25,7 @@ function RouterComponent({ pages }) {
                 : "router_container_item"
             }
             id={page.path}
-            onClick={onClick}
+            onClick={() => onClick(page.path, page.redirect)}
           >
             <span class="material-symbols-outlined" id={page.path}>
               {page.icon}

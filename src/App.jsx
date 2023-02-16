@@ -1,12 +1,11 @@
 import "./App.css";
-import { createBrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import RouterComponent from "./components/RouterComponent";
 import HomePage from "./pages/HomePage";
-import ContactPage from "./pages/ContactPage";
 import EducationPage from "./pages/EducationPage";
 import ExperiencePage from "./pages/ExperiencePage";
-import ProfilesPage from "./pages/ProfilesPage";
 import SkillsPage from "./pages/SkillsPage";
+import NotFoundPage from "./pages/404Page";
 
 const pages = [
   {
@@ -29,16 +28,10 @@ const pages = [
     icon: "school",
     element: <EducationPage />,
   },
-  // {
-  //   path: "/profiles",
-  //   icon: "public",
-  //   element: <ProfilesPage />,
-  // },
   {
-    path: "/contact",
-    icon: "call",
-    element: <ContactPage />,
-  },
+    redirect: "https://linktr.ee/ishivanshgoel",
+    icon: "call"
+  }
 ];
 
 function App() {
@@ -47,8 +40,9 @@ function App() {
       <div className="app_content">
         <Routes>
           {pages.map((page) => (
-            <Route path={page.path} element={page.element} />
+            page.path? <Route path={page.path} element={page.element} /> : null
           ))}
+          <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </div>
       <div className="app_router">
